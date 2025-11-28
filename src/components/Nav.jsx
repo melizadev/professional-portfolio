@@ -10,7 +10,6 @@ export default function Nav() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
