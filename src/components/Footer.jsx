@@ -7,7 +7,6 @@ export default function Footer() {
         <h3 className=" font-semibold tracking-wide">
           © 2025 |Professional portfolio
         </h3>
-
         <div className="flex gap-4 text-xl">
           <a
             href="#"
