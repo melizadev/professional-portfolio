@@ -8,7 +8,7 @@ export default function Home() {
         <Nav />
         <section
           id="home"
-          className="flex flex-col items-center justify-center text-center px-6 gap-4 min-h-[65vh] md:min-h-[80vh] lg:min-h-[92vh]"
+          className="flex flex-col items-center justify-center text-center px-6 gap-4 min-h-[92vh]"
         >
           <h1 className="text-white font-semibold leading-tight text-2xl sm:text-3xl md:text-5xl lg:text-5xl tracking-tight">
             Hi there! I'm{" "}
@@ -24,7 +24,7 @@ export default function Home() {
           <a
             href="#projects"
             aria-label="Go to projects section"
-            className="inline-block text-sm sm:text-base md:text-lg font-semibold px-6 py-2 rounded-lg bg-amber-300/90 hover:bg-amber-300 hover:scale-105 active:scale-100 transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-300 shadow-md"
+            className="inline-block text-sm sm:text-base md:text-lg font-semibold px-6 py-2 rounded-lg bg-amber-300/90 hover:bg-amber-300 hover:scale-105 active:scale-100 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-amber-300 shadow-md"
           >
             See my projects
           </a>

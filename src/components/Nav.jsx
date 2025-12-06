@@ -13,6 +13,11 @@ export default function Nav() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // Cerrar menú al hacer click en un enlace
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
   return (
     <header className="font-sans font-medium text-white w-full">
       <nav aria-label="Main navigation" className="relative">
@@ -67,6 +72,7 @@ export default function Nav() {
             <li className="w-full">
               <a
                 href="#skills"
+                onClick={handleLinkClick}
                 className="block w-full p-2 hover:bg-white/10 transition-all duration-300 "
               >
                 Skills
@@ -75,6 +81,7 @@ export default function Nav() {
             <li className="w-full">
               <a
                 href="#projects"
+                onClick={handleLinkClick}
                 className="block w-full p-2 hover:bg-white/10 transition-all duration-300"
               >
                 Projects
@@ -83,6 +90,7 @@ export default function Nav() {
             <li className="w-full">
               <a
                 href="#contact"
+                onClick={handleLinkClick}
                 className="block w-full p-2 hover:bg-white/10 transition-all duration-300"
               >
                 Let’s Talk

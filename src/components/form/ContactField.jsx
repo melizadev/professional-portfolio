@@ -8,7 +8,7 @@ export default function ContactField({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="block mb-1 font-medium">
+      <label htmlFor={id} className="block mb-1 text-neutral-800 font-medium">
         {label}{" "}
         <span aria-hidden="true" className="text-red-500">
           *
@@ -22,7 +22,7 @@ export default function ContactField({
           aria-invalid={!!error}
           aria-describedby={error ? `error-${id}` : undefined}
           {...register}
-          className={`w-full bg-gray-100 focus:bg-white p-2 rounded border outline-none focus:ring-2 focus:ring-indigo-600 
+          className={`w-full bg-gray-50 focus:bg-white p-2 rounded border outline-none focus:ring-2 focus:ring-indigo-600 
             ${error ? "border-red-500" : "border-gray-300"}`}
         />
       ) : (
@@ -33,7 +33,7 @@ export default function ContactField({
           aria-invalid={!!error}
           aria-describedby={error ? `error-${id}` : undefined}
           {...register}
-          className={`w-full bg-gray-100 focus:bg-white p-2 rounded border outline-none focus:ring-2 focus:ring-indigo-600 
+          className={`w-full bg-gray-50 focus:bg-white p-2 rounded border outline-none focus:ring-2 focus:ring-indigo-600 
             ${error ? "border-red-500" : "border-gray-300"}`}
         />
       )}

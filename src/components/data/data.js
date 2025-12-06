@@ -1,46 +1,55 @@
-import jsLogo from "../../assets/js.png";
-import tsLogo from "../../assets/typescript.png";
-import cssLogo from "../../assets/css.png";
-import htmlLogo from "../../assets/html.png";
-import reactLogo from "../../assets/react.png";
-import code from "../../assets/code.png";
-import git from "../../assets/git.png";
+import jsLogo from "../../assets/js.avif";
+import tsLogo from "../../assets/typescript.avif";
+import cssLogo from "../../assets/css.avif";
+import htmlLogo from "../../assets/html.avif";
+import reactLogo from "../../assets/react.avif";
+import code from "../../assets/code.avif";
+import git from "../../assets/git.avif";
+import proj1 from "../../assets/rickmortyapp.avif";
 
 export const projects = [
   {
     id: 1,
     title: "Rick and Morty API",
     description:
-      "A web application built using React.js and Tailwind CSS that connects to the Rick and Morty public API to display detailed information about characters, locations, and episodes..",
+      "A web application built using React.js that connects to the Rick and Morty public API.",
+    imgUrl: proj1,
+    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
   },
   {
     id: 2,
     title: "E-commerce Store",
-    description:
-      "An online store built with React and Node.js, featuring a user-friendly interface, product listings, shopping cart functionality, and secure payment processing.",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imgUrl: proj1,
+    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
   },
   {
     id: 3,
     title: "Fave List Page",
-    description: "",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imgUrl: proj1,
+    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
   },
   {
     id: 4,
     title: "Trivia Game",
-    description:
-      "A fun and interactive trivia game built with JavaScript, HTML, and CSS that challenges players with questions from various categories and tracks their scores.",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imgUrl: proj1,
+    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
   },
   {
     id: 5,
     title: "Form Validation",
-    description:
-      "A web form built with HTML, CSS, and JavaScript that includes real-time validation for user inputs, ensuring data integrity and providing instant feedback to users.",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imgUrl: proj1,
+    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
   },
   {
     id: 6,
     title: "Weather App",
-    description:
-      "A weather forecasting application that utilizes a public weather API to provide users with current weather conditions, forecasts, and other meteorological data based on their location.",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    imgUrl: proj1,
+    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
   },
 ];
 

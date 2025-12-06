@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import ContactInfo from "./ContactInfo";
 import ContactField from "./ContactField";
@@ -26,9 +26,10 @@ export default function ContactForm() {
     try {
       await emailjs.send(serviceId, templateId, data, publicKey);
       reset();
-      setSuccessMessage("Formulario enviado con éxito 🎉");
-    } catch {
-      setSuccessMessage("Hubo un error, por favor inténtalo nuevamente.");
+      setSuccessMessage("Message sent successfully!");
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setSuccessMessage("There was an error, please try again.");
     }
   };
 
@@ -36,7 +37,7 @@ export default function ContactForm() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="bg-gray-200 w-full flex flex-col md:flex-row items-center md:items-start p-8 justify-center md:justify-evenly gap-6"
+      className="bg-gray-100 w-full flex flex-col md:flex-row items-center md:items-start p-8 justify-center md:justify-evenly gap-6"
     >
       <ContactInfo />
 
@@ -72,10 +73,10 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="bg-indigo-600 hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600 
-            disabled:opacity-60 text-white py-2 rounded transition duration-200"
+          className="bg-[#315fc4] hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-600 
+            disabled:opacity-60 text-white py-2 rounded transition duration-200 cursor-pointer"
         >
-          {isSubmitting ? "Enviando..." : "Enviar"}
+          {isSubmitting ? "Sending..." : "Send"}
         </button>
 
         {successMessage && (
