@@ -1,10 +1,12 @@
-import { skills } from "./data/data.js";
-export default function Skills() {
+import { skills } from "../../data/data.js";
+import { forwardRef } from "react";
+const Skills = forwardRef((_, ref) => {
   return (
     <section
+      ref={ref}
       id="skills"
       aria-labelledby="skills-title"
-      className="w-full bg-gray-50 py-12 px-10 flex flex-col items-center"
+      className="w-full bg-gray-50 py-12 px-10 flex flex-col items-center scroll-mt-[10vh]"
     >
       <h3
         id="skills-title"
@@ -42,4 +44,6 @@ export default function Skills() {
       </div>
     </section>
   );
-}
+});
+
+export default Skills;

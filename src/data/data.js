@@ -1,11 +1,11 @@
-import jsLogo from "../../assets/js.avif";
-import tsLogo from "../../assets/typescript.avif";
-import cssLogo from "../../assets/css.avif";
-import htmlLogo from "../../assets/html.avif";
-import reactLogo from "../../assets/react.avif";
-import code from "../../assets/code.avif";
-import git from "../../assets/git.avif";
-import proj1 from "../../assets/rickmortyapp.avif";
+import jsLogo from "../assets/js.avif";
+import tsLogo from "../assets/typescript.avif";
+import cssLogo from "../assets/css.avif";
+import htmlLogo from "../assets/html.avif";
+import reactLogo from "../assets/react.avif";
+import code from "../assets/code.avif";
+import git from "../assets/git.avif";
+import proj1 from "../assets/rickmortyapp.avif";
 
 export const projects = [
   {

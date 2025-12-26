@@ -1,0 +1,55 @@
+import { links } from "./navLinks";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
+import MobileMenuButton from "./MobileMenuButton";
+import { useNav } from "./hooks/useNav";
+export default function Nav({ scrollTo }) {
+  const {
+    scrolled,
+    linkClass,
+    activeSection,
+    handleDesktopScroll,
+    handleMobileScroll,
+    isOpen,
+    setIsOpen,
+    mobileButtonRef,
+    mobileNavRef,
+  } = useNav();
+
+  return (
+    <header
+      className={`fixed top-0 w-full z-40 transition-all duration-300
+            ${scrolled ? "bg-white shadow-md" : "bg-transparent"}
+          `}
+    >
+      <nav
+        aria-label="Main navigation"
+        className="relative h-[10vh] flex items-center"
+      >
+        <DesktopNav
+          links={links}
+          linkClass={linkClass}
+          activeSection={activeSection}
+          onScroll={handleDesktopScroll}
+          scrollTo={scrollTo}
+        />
+
+        <MobileMenuButton
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          ref={mobileButtonRef}
+        />
+        {isOpen && (
+          <MobileNav
+            links={links}
+            onScroll={handleMobileScroll}
+            scrollTo={scrollTo}
+            ref={mobileNavRef}
+            isOpen={isOpen}
+            activeSection={activeSection}
+          />
+        )}
+      </nav>
+    </header>
+  );
+}
