@@ -5,8 +5,9 @@ import { useState } from "react";
 import ContactInfo from "./ContactInfo";
 import ContactField from "./ContactField";
 import { contactSchema } from "./validation";
+import { forwardRef } from "react";
 
-export default function ContactForm() {
+const ContactForm = forwardRef((_, ref) => {
   const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -37,7 +38,8 @@ export default function ContactForm() {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="bg-gray-100 w-full flex flex-col md:flex-row items-center md:items-start p-8 justify-center md:justify-evenly gap-6"
+      className="bg-gray-100 w-full flex flex-col md:flex-row items-center md:items-start p-8 justify-center md:justify-evenly gap-6 scroll-mt-[10vh]"
+      ref={ref}
     >
       <ContactInfo />
 
@@ -94,4 +96,5 @@ export default function ContactForm() {
       </form>
     </section>
   );
-}
+});
+export default ContactForm;

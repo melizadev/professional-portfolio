@@ -1,11 +1,13 @@
-import { projects } from "./data/data.js";
+import { projects } from "../../data/data.js";
+import { forwardRef } from "react";
 
-export default function Projects() {
+const Projects = forwardRef((_, ref) => {
   return (
     <section
+      ref={ref}
       id="projects"
       aria-labelledby="projects-title"
-      className=" w-full flex flex-col items-center justify-start gap-15 bg-white py-10 px-10"
+      className=" w-full flex flex-col items-center justify-start gap-15 bg-white py-10 px-10 scroll-mt-[10vh]"
     >
       <h3
         id="projects-title"
@@ -51,4 +53,6 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+});
+
+export default Projects;
