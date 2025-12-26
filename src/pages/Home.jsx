@@ -1,7 +1,7 @@
 import { useRef, useCallback } from "react";
 import { useScrollTo } from "../hooks/useScrollTo";
 import Nav from "../components/nav/Nav";
-import Info from "../sections/Info/Info";
+import Info from "../sections/info/Info";
 import Projects from "../sections/projects/Projects";
 import ContactForm from "../sections/form/ContactForm";
 import Footer from "../components/footer/Footer";
