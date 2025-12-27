@@ -18,7 +18,7 @@ export default function Nav({ scrollTo }) {
     <header className="fixed top-0 w-full z-40 transition-all duration-300 bg-white shadow-md">
       <nav
         aria-label="Main navigation"
-        className="relative h-[10vh] flex items-center"
+        className="relative h-[9vh] flex items-center"
       >
         <DesktopNav
           links={links}

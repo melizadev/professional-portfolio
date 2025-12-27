@@ -23,9 +23,7 @@ const Projects = forwardRef((_, ref) => {
         {projects.map((project, index) => (
           <article
             className="bg-white rounded-lg shadow-sm border border-gray-200 pb-3 flex flex-col items-center text-center hover:shadow-md transition-transform transform duration-200 hover:scale-105"
-            role="listitem"
             key={index}
-            aria-label={`Skill in ${project.title}`}
           >
             {" "}
             <div className="w-full rounded-t-lg h-30  bg-gray-200 mb-2 flex items-center justify-center">
@@ -41,7 +39,7 @@ const Projects = forwardRef((_, ref) => {
               rel="noopener noreferrer"
               className=" text-neutral-700  flex flex-col items-center text-center "
             >
-              <h4 className="text-lg font-semibold text-[#315fc4] hover:text-[#1e40af] duration-200">
+              <h4 className="text-lg font-semibold text-gray-600 hover:text-gray-500 transition-colors duration-200 px-7">
                 {project.title}
               </h4>
             </a>{" "}

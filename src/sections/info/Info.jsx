@@ -7,7 +7,7 @@ const Info = forwardRef(({ onGoProjects }, ref) => {
       ref={ref}
       id="info"
     >
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
+      <div className="absolute inset-0 bg-black/55 backdrop-blur-[1px]"></div>
       <div className="relative z-10 flex flex-col">
         <div className="flex flex-col items-center justify-center text-center px-6 gap-4 min-h-screen">
           <h1 className="text-white font-semibold leading-tight text-2xl sm:text-3xl md:text-5xl lg:text-5xl tracking-tight">
@@ -17,7 +17,7 @@ const Info = forwardRef(({ onGoProjects }, ref) => {
             <span className="text-amber-200">Frontend Developer </span>
           </h1>
 
-          <h2 className="text-white/90 font-medium max-w-lg text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+          <h2 className="text-white font-medium max-w-lg text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
             Creating modern, responsive and accessible digital experiences
             through clean code and elegant interfaces.
           </h2>

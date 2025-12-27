@@ -22,7 +22,7 @@ export default function ContactField({
           aria-invalid={!!error}
           aria-describedby={error ? `error-${id}` : undefined}
           {...register}
-          className={`w-full bg-gray-50 focus:bg-white p-2 rounded border outline-none focus:ring-2 focus:ring-indigo-600 
+          className={`w-full mb-2 bg-gray-50 focus:bg-white p-2 rounded border outline-none focus:ring-2 focus:ring-indigo-600 
             ${error ? "border-red-500" : "border-gray-300"}`}
         />
       ) : (
@@ -33,7 +33,7 @@ export default function ContactField({
           aria-invalid={!!error}
           aria-describedby={error ? `error-${id}` : undefined}
           {...register}
-          className={`w-full bg-gray-50 focus:bg-white p-2 rounded border outline-none focus:ring-2 focus:ring-indigo-600 
+          className={`w-full mb-2 bg-gray-50 focus:bg-white p-2 rounded border outline-none focus:ring-2 focus:ring-indigo-600 
             ${error ? "border-red-500" : "border-gray-300"}`}
         />
       )}

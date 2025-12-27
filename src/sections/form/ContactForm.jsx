@@ -47,7 +47,7 @@ const ContactForm = forwardRef((_, ref) => {
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="bg-gray-100 w-full min-h-[480px] flex flex-col md:flex-row items-center md:items-start p-8 justify-start md:justify-evenly gap-4 scroll-mt-[10vh]"
+      className="bg-gray-100 w-full min-h-[520px] flex flex-col md:flex-row items-center md:items-start p-8 justify-start md:justify-evenly gap-4 scroll-mt-[10vh]"
       ref={ref}
     >
       <ContactInfo />

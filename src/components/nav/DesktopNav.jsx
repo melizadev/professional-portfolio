@@ -12,8 +12,8 @@ export default function DesktopNav({
             onClick={() => onScroll(scrollTo[id])}
             className={`px-4 py-2 font-semibold transition-all duration-300 cursor-pointer ${
               id === activeSection
-                ? "text-amber-400 font-bold w-full py-4 px-6 text-left block"
-                : "text-neutral-600 hover:text-neutral-700 w-full py-4 px-6 text-left block"
+                ? "text-amber-400 font-bold w-full py-2 px-2 text-left block"
+                : "text-neutral-600 hover:text-neutral-700 w-full py-2 px-2 text-left block"
             }`}
             aria-current={activeSection === id ? "page" : undefined}
           >
