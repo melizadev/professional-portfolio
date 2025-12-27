@@ -5,12 +5,9 @@ import { useState } from "react";
 import ContactInfo from "./ContactInfo";
 import ContactField from "./ContactField";
 import { contactSchema } from "./validation";
-import { forwardRef } from "react";
+import { forwardRef, useEffect } from "react";
 
 const ContactForm = forwardRef((_, ref) => {
-  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   const {
     register,
     handleSubmit,
@@ -18,27 +15,39 @@ const ContactForm = forwardRef((_, ref) => {
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(contactSchema),
-    mode: "onSubmit",
+    mode: "onTouched",
   });
 
   const [successMessage, setSuccessMessage] = useState("");
 
   const onSubmit = async (data) => {
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     try {
       await emailjs.send(serviceId, templateId, data, publicKey);
-      reset();
       setSuccessMessage("Message sent successfully!");
+      reset();
     } catch (error) {
       console.error("EmailJS error:", error);
       setSuccessMessage("There was an error, please try again.");
     }
   };
+  useEffect(() => {
+    if (!successMessage) return;
+
+    const timer = setTimeout(() => {
+      setSuccessMessage("");
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [successMessage]);
 
   return (
     <section
       id="contact"
       aria-labelledby="contact-title"
-      className="bg-gray-100 w-full flex flex-col md:flex-row items-center md:items-start p-8 justify-center md:justify-evenly gap-6 scroll-mt-[10vh]"
+      className="bg-gray-100 w-full min-h-[480px] flex flex-col md:flex-row items-center md:items-start p-8 justify-start md:justify-evenly gap-4 scroll-mt-[10vh]"
       ref={ref}
     >
       <ContactInfo />
@@ -85,7 +94,7 @@ const ContactForm = forwardRef((_, ref) => {
           <p
             aria-live="polite"
             className={`text-sm ${
-              successMessage.includes("éxito")
+              successMessage.includes("successfully")
                 ? "text-green-600"
                 : "text-red-500"
             }`}
