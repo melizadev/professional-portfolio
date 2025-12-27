@@ -1,7 +1,7 @@
 import { FaInstagram, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-6">
+    <footer className="bg-gray-900 text-gray-300 py-6 px-4">
       <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-center sm:text-left">
           <h3 className="font-semibold tracking-wide">
