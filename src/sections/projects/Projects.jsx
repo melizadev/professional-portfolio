@@ -34,7 +34,7 @@ const Projects = forwardRef((_, ref) => {
               />
             </div>
             <a
-              href="https://melizadev.github.io/rick-and-morty-api/"
+              href={project.projectUrl}
               target="_blank"
               rel="noopener noreferrer"
               className=" text-neutral-700  flex flex-col items-center text-center "

@@ -6,6 +6,11 @@ import reactLogo from "../assets/react.avif";
 import code from "../assets/code.avif";
 import git from "../assets/git.avif";
 import proj1 from "../assets/rickmortyapp.avif";
+import proj2 from "../assets/aurora.avif";
+import proj3 from "../assets/flow.avif";
+import proj4 from "../assets/fave-list.avif";
+import proj5 from "../assets/trivia.avif";
+import proj6 from "../assets/calc.avif";
 
 export const projects = [
   {
@@ -18,38 +23,42 @@ export const projects = [
   },
   {
     id: 2,
-    title: "E-commerce Store",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imgUrl: proj1,
-    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
+    title: "Aurora Weather",
+    description:
+      "Check the weather in any city instantly with Aurora Weather. Clear and up-to-date info for your day.",
+    imgUrl: proj2,
+    projectUrl: "https://melizadev.github.io/aurora-weather/",
   },
   {
     id: 3,
-    title: "Fave List Page",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imgUrl: proj1,
-    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
+    title: "Task Flow",
+    description:
+      "TaskFlow a simple and efficient way to manage all your tasks.",
+    imgUrl: proj3,
+    projectUrl: "https://melizadev.github.io/task-flow/",
   },
   {
     id: 4,
-    title: "Trivia Game",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imgUrl: proj1,
-    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
+    title: "Fave List",
+    description:
+      "Browse artists and music genres with a clean UI, responsive layout, and smooth animations",
+    imgUrl: proj4,
+    projectUrl: "https://melizadev.github.io/fave-list/",
   },
   {
     id: 5,
-    title: "Form Validation",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imgUrl: proj1,
-    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
+    title: "Trivia Game",
+    description: "A fun My Little Pony trivia game built with React.",
+    imgUrl: proj5,
+    projectUrl: "https://melizadev.github.io/trivia-game/",
   },
   {
     id: 6,
-    title: "Weather App",
-    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    imgUrl: proj1,
-    projectUrl: "https://melizadev.github.io/rick-and-morty-api/",
+    title: "Calculator",
+    description:
+      "Modern calculator built with React, TypeScript, and Tailwind CSS. Supports full mathematical expressions.",
+    imgUrl: proj6,
+    projectUrl: "https://melizadev.github.io/calculator/",
   },
 ];
 
